@@ -1,0 +1,20 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bangol – Scarica</title><link rel="stylesheet" href="style.css">
+<script>
+// One link for the QR at the end of a match (09/10/2026): the phone's own store, the referrer
+// code passed on where the store keeps it (Play's install referrer; Apple keeps none).
+(function () {
+  var q = location.search.replace(/^\?/, "");
+  var ua = navigator.userAgent || "";
+  var apple = "https://apps.apple.com/app/id6811360804?pt=bangol&ct=" + encodeURIComponent(q || "qr") + "&mt=8";
+  var play = "https://play.google.com/store/apps/details?id=com.nixare.bangol&referrer=" + encodeURIComponent(q || "utm_source=qr");
+  if (/android/i.test(ua)) location.replace(play);
+  else if (/iphone|ipad|ipod|macintosh/i.test(ua) && "ontouchend" in document || /iphone|ipad|ipod/i.test(ua)) location.replace(apple);
+  window.__stores = { apple: apple, play: play };
+})();
+</script></head><body>
+<nav><a href="index.html">Supporto / Support</a><a href="privacy.html">Privacy</a></nav>
+<h1>Bangol</h1>
+<p>Il duello foto a due, sul tuo telefono. / The photo duel for two, on your own phone.</p>
+<p><a id="apple" href="https://apps.apple.com/app/id6811360804">App Store</a> · <a id="play" href="https://play.google.com/store/apps/details?id=com.nixare.bangol">Google Play</a></p>
+<script>if (window.__stores) { document.getElementById("apple").href = __stores.apple; document.getElementById("play").href = __stores.play; }</script>
+</body></html>
