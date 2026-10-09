@@ -1,0 +1,7 @@
+Fonts in this folder are licensed under the SIL Open Font License, Version 1.1
+(https://openfontlicense.org):
+
+- Patrick Hand SC, Copyright 2012 The Patrick Hand Authors (mail@patrickwagesreiter.at).
+- DSEG7 Classic, Copyright (c) 2018, keshikan (http://www.keshikan.net), with Reserved Font Name "DSEG".
+
+Converted to WOFF2 unchanged for the web.

@@ -1,13 +1,211 @@
-<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bangol – Supporto / Support</title><link rel="stylesheet" href="style.css"></head><body>
-<nav><a href="index.html">Supporto / Support</a><a href="privacy.html">Privacy</a></nav>
-<h1>Bangol</h1>
-<p>Un gioco di deduzione fotografica per iPhone e iPad: una foto si nasconde sotto un provino a contatto, tracci i bordi, sviluppi i fotogrammi e dai un nome alla foto prima dell'avversario.</p>
-<h2>Supporto</h2>
-<p>Per domande, problemi o suggerimenti scrivi a <a href="mailto:aresta.nicola@gmail.com?subject=Bangol">aresta.nicola@gmail.com</a>. Indica il modello di dispositivo, la versione di iOS e, se possibile, cosa stavi facendo quando è comparso il problema.</p>
-<p>Le regole complete sono nel gioco, dal menu <em>Regole</em>.</p>
-<h2>Support</h2>
-<p>Bangol is a photo deduction game for iPhone and iPad: a photo hides under a contact sheet, you trace the edges, develop the frames and name the photo before your opponent does.</p>
-<p>For questions, problems or suggestions write to <a href="mailto:aresta.nicola@gmail.com?subject=Bangol">aresta.nicola@gmail.com</a>. Please include your device model, iOS version and, if you can, what you were doing when the problem appeared.</p>
-<p>The full rules are inside the game, under <em>Rules</em>.</p>
-<p><small>© 2026 Nicola Aresta</small></p>
-</body></html>
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bangol – Il duello foto a due</title>
+<meta name="description" content="Bangol: una foto sotto un provino a contatto, due giocatori, una matita a testa. Nominala per primo, vedendone il meno possibile. Per iPhone, iPad e Android.">
+<meta name="theme-color" content="#1B1512">
+<meta property="og:title" content="Bangol – Il duello foto a due">
+<meta property="og:description" content="Una foto sotto un provino a contatto: nominala per primo, vedendone il meno possibile.">
+<meta property="og:image" content="https://nicobass86.github.io/bangol-site/img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="apple-itunes-app" content="app-id=6811360804">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/PatrickHandSC-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script>
+// Italian first; an English browser, #en or the switch shows the English.
+(function () {
+  var en = location.hash === "#en";
+  try { var s = localStorage.getItem("lang"); if (s) en = s === "en"; else if (!en) en = !/^it\b/i.test(navigator.language || "it"); } catch (e) {}
+  if (en) { document.documentElement.classList.add("en"); document.documentElement.lang = "en"; }
+})();
+function setLang(l) {
+  document.documentElement.classList.toggle("en", l === "en");
+  document.documentElement.lang = l;
+  try { localStorage.setItem("lang", l); } catch (e) {}
+}
+</script>
+</head>
+<body class="i18n">
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="img/icon.webp" alt="" width="34" height="34">Bangol</a>
+    <div class="lang" role="group" aria-label="Lingua / Language">
+      <button type="button" data-l="it" onclick="setLang('it')">IT</button>
+      <button type="button" data-l="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="title">
+  <div class="art" role="img" aria-label="La stanza di Bangol: una camera oscura disegnata a matita, con la lampada accesa"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <h1 id="title">Bangol</h1>
+    <p class="tagline"><span lang="it">Il duello foto a due</span><span lang="en">The photo duel for two</span></p>
+    <p class="lede">
+      <span lang="it">Una foto si nasconde sotto un provino a contatto. Due giocatori, una matita a testa: chi chiude un fotogramma lo sviluppa e lo vede solo lui. Dai un nome alla foto per primo, avendone visto il meno possibile.</span>
+      <span lang="en">A photo hides under a contact sheet. Two players, a pencil each: whoever closes a frame develops it and sees it alone. Name the photo first, having seen as little as you can.</span>
+    </p>
+    <div class="stores">
+      <a class="store amber" href="https://apps.apple.com/app/id6811360804">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v7m-3-3 3 3 3-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span><small lang="it">Scarica su</small><small lang="en">Download on the</small><b>App Store</b></span>
+      </a>
+      <a class="store" href="https://play.google.com/store/apps/details?id=com.nixare.bangol">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l14-8.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        <span><small lang="it">Disponibile su</small><small lang="en">Get it on</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="come" aria-labelledby="how">
+  <div class="wrap">
+    <p class="kicker"><span lang="it">Come si gioca</span><span lang="en">How it plays</span></p>
+    <h2 class="section-title" id="how"><span lang="it">Un gioco di nervi</span><span lang="en">A game of nerve</span></h2>
+    <p class="section-lede">
+      <span lang="it">Due minuti a partita. Ogni lato che tracci apre una fessura di foto, solo per i tuoi occhi. Tenta troppo presto e un errore regala fotogrammi; aspetta troppo e la nomina prima l'altro.</span>
+      <span lang="en">Two minutes a match. Every edge you trace opens a slit of photo, for your eyes only. Guess too early and a mistake gives frames away; wait too long and your rival names it first.</span>
+    </p>
+    <div class="sheet">
+      <ol class="frames" role="list" style="list-style:none;margin:0;padding:0">
+        <li class="frame"><span class="n" aria-hidden="true">1</span><div>
+          <h3><span lang="it">Traccia i lati</span><span lang="en">Trace the edges</span></h3>
+          <p><span lang="it">A turno, un lato a testa sulla griglia del provino, con la tua matita.</span><span lang="en">Take turns, one edge each on the contact sheet's grid, with your own pencil.</span></p>
+          <span class="mark r" aria-hidden="true"></span></div></li>
+        <li class="frame"><span class="n" aria-hidden="true">2</span><div>
+          <h3><span lang="it">Sviluppa il fotogramma</span><span lang="en">Develop the frame</span></h3>
+          <p><span lang="it">Chiudi il quarto lato: quel pezzo di foto lo vedi solo tu.</span><span lang="en">Close the fourth side: that piece of the photo is yours alone to see.</span></p>
+          <span class="mark b" aria-hidden="true"></span></div></li>
+        <li class="frame"><span class="n" aria-hidden="true">3</span><div>
+          <h3><span lang="it">Nominala per primo</span><span lang="en">Name it first</span></h3>
+          <p><span lang="it">Meno hai visto, più fai punti: 100 meno la quota di foglio che avevi scoperto.</span><span lang="en">The less you saw, the more you score: 100 minus the share of the sheet you had uncovered.</span></p>
+          <span class="mark a" aria-hidden="true"></span></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="look">
+  <div class="wrap">
+    <p class="kicker"><span lang="it">Dentro il gioco</span><span lang="en">Inside the game</span></p>
+    <h2 class="section-title" id="look"><span lang="it">La tua camera oscura</span><span lang="en">Your darkroom</span></h2>
+    <p class="section-lede"><span lang="it">La home è una stanza: ogni cosa che brilla è un modo di giocare.</span><span lang="en">The home is a room: everything that glows is a way to play.</span></p>
+    <div class="strip" lang="it" tabindex="0" aria-label="Schermate">
+      <figure><img src="img/shot_it_1.webp" alt="La home: la camera oscura, ogni oggetto un modo di giocare" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_3.webp" alt="Una partita: il provino, i lati tracciati, l'orologio" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_5.webp" alt="Il risultato: la foto svelata e il punteggio" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_2.webp" alt="Sfida un amico: qui accanto, a distanza, stesso telefono" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_4.webp" alt="Sviluppo rapido: livelli senza fine in rullini da 36" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_6.webp" alt="La storia: la mappa di Helide, nove rivali" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_7.webp" alt="Per i piccoli: nessun orologio, quattro parole" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_it_8.webp" alt="Il registro: stampe, record, giorni di fila" width="460" height="1000" loading="lazy"></figure>
+    </div>
+    <div class="strip" lang="en" tabindex="0" aria-label="Screenshots">
+      <figure><img src="img/shot_en_1.webp" alt="The home: the darkroom, every object a way to play" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_3.webp" alt="A match: the contact sheet, traced edges, the clock" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_5.webp" alt="The result: the photo revealed and the score" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_2.webp" alt="Challenge a friend: right here, far away, same phone" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_4.webp" alt="Quick Develop: endless levels in rolls of 36" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_6.webp" alt="The story: the map of Helide, nine rivals" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_7.webp" alt="For kids: no clock, four words" width="460" height="1000" loading="lazy"></figure>
+      <figure><img src="img/shot_en_8.webp" alt="The register: prints, records, streaks" width="460" height="1000" loading="lazy"></figure>
+    </div>
+    <p class="strip-hint" aria-hidden="true"><span lang="it">Scorri →</span><span lang="en">Swipe →</span></p>
+  </div>
+</section>
+
+<section aria-labelledby="modes">
+  <div class="wrap">
+    <p class="kicker"><span lang="it">I modi di giocare</span><span lang="en">Ways to play</span></p>
+    <h2 class="section-title" id="modes"><span lang="it">Ogni cosa che brilla</span><span lang="en">Everything that glows</span></h2>
+    <div class="modes">
+      <article class="mode"><div class="pic"><img src="img/obj_friend.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">Sfida un amico</span><span lang="en">Challenge a friend</span></h3>
+        <p><span lang="it">Due telefoni fianco a fianco senza account, a distanza a turni, o da due a quattro passandovi il telefono.</span><span lang="en">Two phones side by side with no account, far away in turns, or two to four passing one phone.</span></p></article>
+      <article class="mode"><div class="pic"><img src="img/obj_quick_glow.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">Sviluppo rapido</span><span lang="en">Quick Develop</span></h3>
+        <p><span lang="it">Livelli senza fine in rullini da 36, ognuno un'epoca della fotografia. Bronzo, argento, oro.</span><span lang="en">Endless levels in rolls of 36, each an era of photography. Bronze, silver, gold.</span></p></article>
+      <article class="mode"><div class="pic"><img src="img/obj_story.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">Lo scoop dell'Orologio</span><span lang="en">The Clock Scoop</span></h3>
+        <p><span lang="it">Helide, 1957: nove rivali sulla mappa della città, una storia noir, un indovinello per ogni notte.</span><span lang="en">Helide, 1957: nine rivals across the city map, a noir story, a riddle for every night.</span></p></article>
+      <article class="mode"><div class="pic"><img src="img/obj_daily.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">La giornaliera</span><span lang="en">The daily</span></h3>
+        <p><span lang="it">Una foto al giorno, uguale per tutti. Condividi la griglia e confrontati sulla classifica.</span><span lang="en">One photo a day, the same for everyone. Share the grid and compare on the leaderboard.</span></p></article>
+      <article class="mode"><div class="pic"><img src="img/obj_rullini.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">Rullini</span><span lang="en">Rolls</span></h3>
+        <p><span lang="it">Rullini a tema da 36 foto che arrivano senza aggiornamento, o un rullino tuo con le foto del telefono.</span><span lang="en">Themed rolls of 36 photos that arrive without an update, or a roll of your own from your phone's photos.</span></p></article>
+      <article class="mode"><div class="pic"><img src="img/obj_kids.webp" alt="" loading="lazy"></div>
+        <h3><span lang="it">Per i piccoli</span><span lang="en">For kids</span></h3>
+        <p><span lang="it">Un foglio 4×4 senza orologio: il nome si sceglie fra quattro parole lette ad alta voce. Niente pubblicità.</span><span lang="en">A 4×4 sheet with no clock: the name is picked among four words read aloud. No ads.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="fair">
+  <div class="wrap fair">
+    <div>
+      <img class="jar" src="img/salt.webp" alt="" width="80" loading="lazy">
+      <p class="kicker"><span lang="it">Gratis e onesto</span><span lang="en">Free and fair</span></p>
+      <h2 class="section-title" id="fair"><span lang="it">Sali d'argento</span><span lang="en">Silver salts</span></h2>
+      <ul>
+        <li><span><span lang="it">Ogni foglio passato paga in sali: bronzo 1, argento 3, oro 6.</span><span lang="en">Every sheet you pass pays salts: bronze 1, silver 3, gold 6.</span></span></li>
+        <li><span><span lang="it">I sali comprano solo qualcosa di nuovo da giocare: mai un tentativo, un secondo o un aiuto.</span><span lang="en">Salts only ever buy something new to play: never a try, a second or a hint.</span></span></li>
+        <li><span><span lang="it">Niente timer, niente loot box. I sali non scadono mai.</span><span lang="en">No timers, no loot boxes. Salts never expire.</span></span></li>
+        <li><span><span lang="it">Mai pubblicità nella stanza dei piccoli, nelle partite a due e nella giornaliera.</span><span lang="en">Never an ad in the kids' room, in two-player matches or in the daily.</span></span></li>
+      </ul>
+    </div>
+    <figure class="door">
+      <img src="img/darkroom.webp" alt="La Camera oscura: la lampada rossa accesa sulle stampe ad asciugare" width="1200" height="800" loading="lazy">
+      <figcaption>
+        <h3>Camera oscura</h3>
+        <p><span lang="it">Un acquisto solo, per tutta la famiglia: niente più pubblicità, 540 sali subito, un rullino a scelta, l'album senza limiti.</span><span lang="en">One purchase, for the whole family: no more ads, 540 salts at once, a roll of your choice, the album without limits.</span></p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section aria-labelledby="maker">
+  <div class="wrap maker">
+    <img src="img/icon.webp" alt="" width="96" height="96" loading="lazy">
+    <div>
+      <p class="kicker" id="maker"><span lang="it">Chi lo fa</span><span lang="en">Who makes it</span></p>
+      <blockquote>
+        <span lang="it">Fatto a mano da <span class="hl">uno sviluppatore solo</span>, in Italia: ogni foto scelta, ogni tratto a matita.</span>
+        <span lang="en">Made by hand by <span class="hl">one developer</span> in Italy: every photo picked, every pencil stroke drawn.</span>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="supporto" aria-labelledby="support">
+  <div class="wrap">
+    <div class="card">
+      <h2 id="support"><span lang="it">Supporto</span><span lang="en">Support</span></h2>
+      <p><span lang="it">Domande, problemi o suggerimenti? Scrivici. Indica il modello del dispositivo, la versione del sistema e, se puoi, cosa stavi facendo quando è comparso il problema.</span><span lang="en">Questions, problems or suggestions? Write to us. Include your device model, system version and, if you can, what you were doing when the problem appeared.</span></p>
+      <p><a class="mail" href="mailto:aresta.nicola@gmail.com?subject=Bangol">aresta.nicola@gmail.com</a></p>
+      <p><span lang="it">Le regole complete sono nel gioco, dal menu <em>Regole</em>.</span><span lang="en">The full rules are inside the game, under <em>Rules</em>.</span></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <nav aria-label="Pagine / Pages">
+      <a href="privacy.html">Privacy</a>
+      <a href="delete-data.html"><span lang="it">Cancellare i dati</span><span lang="en">Delete your data</span></a>
+      <a href="#supporto"><span lang="it">Supporto</span><span lang="en">Support</span></a>
+    </nav>
+    <span>© 2026 Nicola Aresta</span>
+  </div>
+</footer>
+</body>
+</html>
