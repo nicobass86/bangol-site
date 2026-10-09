@@ -162,3 +162,8 @@ footer a:hover{color:var(--safelight)}
   .glow{animation:none}
   .store{transition:none}
 }
+
+/* The app's icon at the left of the title, as on the store (10/2026). */
+.title-row{display:flex;align-items:center;gap:clamp(14px,3vw,28px)}
+.app-icon{width:clamp(64px,20vw,168px);height:auto;aspect-ratio:1;border-radius:22.5%;box-shadow:0 10px 30px rgba(0,0,0,.55),0 0 40px rgba(242,163,58,.28);flex:none}
+.title-row h1{font-size:clamp(60px,22vw,176px);min-width:0}
